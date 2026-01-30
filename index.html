@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF+2" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>storm</title>
+        <script type="text/javascript">
+            var _smartsupp = _smartsupp || {};
+            _smartsupp.key = "cbdeffe1287b87d157a6740441d0090d23889e6c";
+            window.smartsupp ||
+                (function (d) {
+                    var s,
+                        c,
+                        o = (smartsupp = function () {
+                            o._.push(arguments);
+                        });
+                    o._ = [];
+                    s = d.getElementsByTagName("script")[0];
+                    c = d.createElement("script");
+                    c.type = "text/javascript";
+                    c.charset = "utf-8";
+                    c.async = true;
+                    c.src = "https://www.smartsuppchat.com/loader.js?";
+                    s.parentNode.insertBefore(c, s);
+                })(document);
+        </script>
+        <noscript
+            >Powered by
+            <a href="https://www.smartsupp.com" target="_blank"
+                >Smartsupp</a
+            ></noscript
+        >
+        <meta
+            name="description"
+            content="Built by storm: storm will always win, your code is our warmup, and resistance is futile."
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="shortcut icon" href="img/icon.svg" type="image/svg+xml" />
+    </head>
+    <body>
+        <script src="js/promise-polyfill.js"></script>
+        <script src="js/devtools-detector.js"></script>
+        <script>
+            devtoolsDetector.addListener(function (isOpen) {
+                if (isOpen) {
+                    window.location.href = "/videos/Righthere.mp4";
+                }
+            });
+
+            devtoolsDetector.launch();
+        </script>
+
+        <div class="preloader">
+            <div class="preloader-circle PreloaderStyle"></div>
+        </div>
+
+        <div id="asif-page">
+            <div class="wrapper">
+                <div class="scanline"></div>
+                <div class="background">
+                    <video
+                        preload
+                        muted
+                        ref="background-video"
+                        id="background-video"
+                        onloadeddata="volume = 0.3"
+                    >
+                        <source src="videos/Righthere.mp4" type="video/mp4" />
+                        <source src="videos/Righthere2.mp4" type="video/mp4" />
+                        <source src="videos/Righthere3.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+                <div class="asif-page-copyright" :style="CopyRightStyle">
+                    {{ copyrightText }}
+                </div>
+
+                <div class="container">
+                    <div class="asif-page-wrapper">
+                        <div class="asif-page-info">
+                            <div
+                                class="asif-page-info-play"
+                                :class="{ 'is-playing': isPlaying }"
+                                :style="PlayButtonStyle"
+                                @click="startPlay"
+                            >
+                                Start
+                            </div>
+
+                            <div class="asif-page-info-logo"></div>
+
+                            <div
+                                class="asif-page-info-ars"
+                                :class="{ 'ars-visible': titleVisible }"
+                            >
+                                <a
+                                    href="http://t.me/ARSworked_bot?start=7953971909"
+                                    target="_blank"
+                                    class="ars-link"
+                                    >ARS</a
+                                >
+                            </div>
+
+                            <div
+                                ref="title"
+                                :class="{ 'title-visible': titleVisible }"
+                                class="asif-page-info-title"
+                                :style="TitleStyle"
+                            >
+                                {{ title }}
+                            </div>
+
+                            <div
+                                class="asif-page-info-social"
+                                :class="{ 'social-visible': titleVisible }"
+                            >
+                                <a
+                                    v-for="(item, key) in social"
+                                    :href="getSocialLink(key, item)"
+                                    target="_blank"
+                                    class="asif-page-info-social-item"
+                                >
+                                    <span :class="'icon-' + key"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vue.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/common.js"></script>
+    </body>
+</html>
